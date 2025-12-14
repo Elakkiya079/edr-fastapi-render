@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from pydantic import BaseModel, Field
 from typing import Optional
 
@@ -23,3 +25,9 @@ class DoctorOut(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+# Ensure any forward references (string annotations) are resolved
+DoctorCreate.update_forward_refs()
+DoctorUpdate.update_forward_refs()
+DoctorOut.update_forward_refs()
