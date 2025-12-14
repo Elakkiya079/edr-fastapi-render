@@ -27,18 +27,3 @@ RUN & TEST INSTRUCTIONS
 
 - Soft delete:
   curl -X DELETE "http://127.0.0.1:8000/Doctors/1"
-
-6) To create the Word doc with screenshots (manually):
-   - Run requests / open the Swagger UI and take screenshots of:
-     * Request payload used
-     * Response JSON visible in Swagger / curl terminal output
-     * pytest output (if you run tests)
-   - Open Microsoft Word, paste images and add captions:
-     * "API Create Doctor - request and response"
-     * "API GET Doctor - response"
-     * "pytest results"
-   - Save as `EDR_test_results.docx`.
-
-7) Zipping already included in this archive. To deploy, recommended steps:
-   - Use Docker (create Dockerfile) and push to Railway/Fly.io/Render.
-   - Set an env var for DATABASE_URL (for production DB).
