@@ -1,0 +1,36 @@
+SAMPLE EXPECTED OUTPUTS (examples)
+
+1) Create doctor (POST /Doctor/)
+Request:
+{"name":"Dr. Priya","age":38,"gender":"Female","speciality":"Cardiology"}
+
+Response 201:
+{
+  "id": 1,
+  "name": "Dr. Priya",
+  "age": 38,
+  "gender": "Female",
+  "speciality": "Cardiology",
+  "is_active": true
+}
+
+2) Get doctor (GET /Doctor/1)
+Response 200:
+{
+  "id": 1,
+  "name": "Dr. Priya",
+  "age": 38,
+  "gender": "Female",
+  "speciality": "Cardiology",
+  "is_active": true
+}
+
+3) List doctors (GET /Doctors/)
+Response 200: [ { ... }, { ... } ]
+
+4) Update (PUT /Doctors/1)
+Response 200: updated JSON
+
+5) Soft delete (DELETE /Doctors/1)
+Response 200:
+{"detail":"Doctor soft-deleted"}
